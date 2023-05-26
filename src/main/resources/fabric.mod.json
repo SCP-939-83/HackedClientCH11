@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "autoreconnect-test",
+	"version": "${version}",
+	"name": "autoreconnect-test",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/autoreconnect-test/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+          "autoreconnect.autoreconnect.Autoreconnect"
+		],
+		"client": [
+			"autoreconnect.autoreconnect.AutoreconnectClient"
+		],
+		"fabric-datagen": [
+			"autoreconnect.autoreconnect.AutoreconnectDataGenerator"
+		]
+	},
+	"mixins": [
+		"autoreconnect-test.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
