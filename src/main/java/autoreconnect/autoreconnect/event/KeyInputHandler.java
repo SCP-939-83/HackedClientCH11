@@ -8,12 +8,13 @@ import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyInputHandler {
+    static CheatLogicHandler bhopLogic = new CheatLogicHandler();
     public static final String KEY_CATEGORY_VISTACLIENT =  "key.category.vistaclient";
     public static final String KEY_VISTACLIENT_TESTKEY = "key.category.vistaclient.test";
     public static final String KEY_VISTACLIENT_BUNNYHOP = "key.category.vistaclient.bhop";
     public static KeyBinding testkey;
     public static KeyBinding bunnyhop;
-    public static boolean BHOPTOGGLE = true;
+    public static boolean BHOPTOGGLE = false;
 
     public static void registerKeyInputs() {
         //testkey
@@ -27,7 +28,11 @@ public class KeyInputHandler {
             if(bunnyhop.wasPressed()){
                 BHOPTOGGLE = !BHOPTOGGLE;
                 client.player.sendMessage(Text.of(String.valueOf(BHOPTOGGLE)));
-                CheatLogicHandler.BHOP_LOGIC_FUNCTION();
+                if (BHOPTOGGLE && client.player.isOnGround() && client.player.isSprinting()){
+                    client.player.jump();
+                }
+//                else {return;}
+                //                bhopLogic.start(); fucjing threads
                 }
         });
     }
