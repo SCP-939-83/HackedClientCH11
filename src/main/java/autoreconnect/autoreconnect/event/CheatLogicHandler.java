@@ -5,24 +5,32 @@ import net.minecraft.text.Text;
 
 import static autoreconnect.autoreconnect.event.KeyInputHandler.BHOPTOGGLE;
 
-public class CheatLogicHandler {
+
+public class CheatLogicHandler extends Thread{
 //    public static void TICK(){
 //        while (true){
 //            TICK();
 //            BHOP_LOGIC_FUNCTION();
 //        }
 //    }
-    public static void BHOP_LOGIC_FUNCTION(){
-        while (BHOPTOGGLE){
-            ClientTickEvents.END_CLIENT_TICK.register(client -> {
-                client.player.sendMessage(Text.of("THIS SHOULD BE WORKING RIGHT NOW"));
-                if (client.player.isOnGround()){
-                    client.player.jump();
+    @Override
+    public void run(){
+        while (BHOPTOGGLE) {ClientTickEvents.END_CLIENT_TICK.register(client -> {
+                if (client.player.isOnGround() | client.player.isSprinting()){
+//                  client.player.jump();
+                    client.player.sendMessage(Text.of("THIS SHOULD BE WORKING RIGHT NOW"));
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
+
             });
-            if (BHOPTOGGLE == false){
-                return;
-            }
+        }
+        if (BHOPTOGGLE == false){
+            return;
         }
     }
+
 }
