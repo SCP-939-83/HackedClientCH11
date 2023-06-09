@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "net.fabricmc.fabric.mixin.object.builder",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "AbstractBlockAccessor",
+    "AbstractBlockSettingsAccessor",
+    "CriteriaAccessor",
+    "DefaultAttributeRegistryAccessor",
+    "DefaultAttributeRegistryMixin",
+    "DetectorRailBlockMixin",
+    "TradeOffersTypeAwareBuyForOneEmeraldFactoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.fabricmc.fabric.mixin.client.rendering.fluid",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+    "FluidRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1,
+    "maxShiftBy": 5
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "fabric-item-api-v1-testmod",
+  "name": "Fabric Item API (v1) Test Mod",
+  "version": "1.0.0",
+  "environment": "*",
+  "license": "Apache-2.0",
+  "depends": {
+    "fabric-item-api-v1": "*"
+  },
+  "entrypoints": {
+    "main": [
+      "net.fabricmc.fabric.test.item.CustomDamageTest",
+      "net.fabricmc.fabric.test.item.FabricItemSettingsTests",
+      "net.fabricmc.fabric.test.item.ItemUpdateAnimationTest",
+      "net.fabricmc.fabric.test.item.ModifyItemAttributeModifiersCallbackTest",
+      "net.fabricmc.fabric.test.item.ArmorKnockbackResistanceTest"
+    ],
+    "client": [
+      "net.fabricmc.fabric.test.item.client.TooltipTests"
+    ],
+    "fabric-gametest" : [
+      "net.fabricmc.fabric.test.item.gametest.BrewingStandGameTest",
+      "net.fabricmc.fabric.test.item.gametest.FurnaceGameTest",
+      "net.fabricmc.fabric.test.item.gametest.RecipeGameTest"
+    ]
+  },
+  "mixins": [
+    "fabric-item-api-tests-v1.mixins.json"
+  ]
+}

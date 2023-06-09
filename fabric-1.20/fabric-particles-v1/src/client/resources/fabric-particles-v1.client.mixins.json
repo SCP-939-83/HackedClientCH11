@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.fabricmc.fabric.mixin.client.particle",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+    "ParticleManagerMixin",
+    "ParticleManagerAccessor",
+    "ParticleManagerAccessor$SimpleSpriteProviderAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

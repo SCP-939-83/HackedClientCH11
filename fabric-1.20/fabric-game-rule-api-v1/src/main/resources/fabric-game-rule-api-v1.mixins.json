@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "net.fabricmc.fabric.mixin.gamerule",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "GameRulesBooleanRuleAccessor",
+    "GameRuleCommandAccessor",
+    "GameRuleCommandVisitorMixin",
+    "GameRulesAccessor",
+    "GameRulesIntRuleAccessor",
+    "GameRulesKeyMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

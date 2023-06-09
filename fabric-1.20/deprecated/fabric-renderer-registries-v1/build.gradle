@@ -1,0 +1,7 @@
+archivesBaseName = "fabric-renderer-registries-v1"
+version = getSubprojectVersion(project)
+
+moduleDependencies(project, [
+		'fabric-api-base',
+		'fabric-rendering-v1'
+])
