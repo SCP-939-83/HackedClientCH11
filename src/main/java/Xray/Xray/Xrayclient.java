@@ -1,4 +1,4 @@
-package killaura.killaura;
+package Xray.Xray;
 
 import autoreconnect.autoreconnect.event.KeyInputHandler;
 
