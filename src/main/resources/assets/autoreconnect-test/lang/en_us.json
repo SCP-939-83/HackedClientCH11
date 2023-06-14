@@ -1,5 +1,7 @@
 {
   "key.category.vistaclient": "VistaClient Keybindings",
-  "key.category.vistaclient.test": "Test key",
-  "key.category.vistaclient.bhop": "Bunnyhop Toggle"
+  "key.category.vistaclient.test": "Test Key",
+  "key.category.vistaclient.bhop": "Bunnyhop Toggle",
+  "key.category.vistaclient.speedhack": "Speedhack Toggle",
+  "key.category.vistaclient.launch": "Launch Key"
 }
